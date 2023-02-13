@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int arrangeCoins(int n) {
+        long long int m=pow(2,31);
+        long long int s=0,c=0;
+        for(int i=0;i<=m-1;i++)
+        {
+            s=s+i;     //To calculate the coins in each row
+            if(s>n)     //Check if coins in each row is more than n
+            break;
+            else
+            c++;      //To count the rows completed
+        }
+       return c-1;
